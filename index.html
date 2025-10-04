@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Irrigação IoT</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h2>🌱 Sistema de Irrigação IoT</h2>
+        </header>
+
+        <!-- Display de Felicidade -->
+        <div id="statusDisplay">
+            <h1 id="plantMood">🌱</h1>
+            <p id="statusText">Carregando leitura...</p>
+        </div>
+
+        <!-- Tabela -->
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Umidade (%)</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+        <div class="pagination">
+            <button id="prevBtn">Anterior</button>
+            <span id="pageInfo"></span>
+            <button id="nextBtn">Próximo</button>
+        </div>
+
+        <!-- Botão de Irrigação Manual -->
+        <div id="manualIrrigation" class="irrigationButton">
+            🪣 Irrigar
+        </div>
+
+        <footer>
+            <img src="img/bigdogo_logo.png" alt="">
+        </footer>
+    </main>
+</body>
+
+</html>

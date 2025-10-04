@@ -1,0 +1,192 @@
+/* ===== RESET / BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
+  color: #333;
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: center;      /* centraliza verticalmente */
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h2 {
+  color: #388e3c;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ===== TABELA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+th, td {
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: #f1f8e9;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fbe7;
+}
+
+tbody tr:hover {
+  background-color: #edf7ed;
+}
+
+/* ===== PAGINAÇÃO ===== */
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+}
+
+button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #388e3c;
+}
+
+#pageInfo {
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===== CONTAINER DO BOTÃO ===== */
+.buttonContainer {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+/* ===== BOTÃO DE IRRIGAÇÃO ===== */
+.irrigationButton {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #90caf9; /* azul pastel */
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  user-select: none;
+}
+
+.irrigationButton:hover {
+  background-color: #64b5f6; /* azul pastel ligeiramente mais escuro */
+  transform: translateY(-2px);
+}
+
+.irrigationButton:active {
+  transform: translateY(1px);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: auto;
+}
+
+/* ===== MOBILE FIRST ===== */
+@media (min-width: 600px) {
+  th, td {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  header h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+/* ===== DISPLAY DE STATUS ===== */
+#statusDisplay {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+#plantMood {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+#statusText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #388e3c;
+}
+
