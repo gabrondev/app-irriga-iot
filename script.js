@@ -148,10 +148,27 @@ async function atualizarStatusPlanta() {
     }
 }
 
-document.getElementById("manualIrrigation").addEventListener("click", () => {
-    alert("Função de irrigação manual ainda não implementada.");
-});
+// ===== Importações RTDB =====
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
 
+// Inicializa o RTDB
+const database = getDatabase(app);
+
+// Referência para o campo da bomba
+const bombaRef = ref(database, "controle/bomba");
+
+// Botão de irrigação manual
+document.getElementById("manualIrrigation").addEventListener("click", () => {
+    // Define true no RTDB
+    set(bombaRef, true)
+        .then(() => {
+            alert("Irrigação manual acionada!");
+        })
+        .catch((error) => {
+            console.error("Erro ao acionar a bomba:", error);
+            alert("Falha ao acionar a irrigação.");
+        });
+});
 
 
 // ===== Eventos =====
